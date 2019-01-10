@@ -47,7 +47,12 @@ int main(){
 		ifstream inFile;
 		inFile.open("sampleTweets.csv"); //The sample tweet file
 
+		if (inFile.good()) { //checks if the file is open
 
+			while (!inFile.eof()) { //Will keep running until it reaches the end of the file 
+
+			}
+		}
 	}
 	system("pause");
 	return 0;
