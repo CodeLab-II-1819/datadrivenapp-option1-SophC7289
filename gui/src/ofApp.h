@@ -8,6 +8,7 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 
-		void background();
+		void background(); //Declare background
+		ofTrueTypeFont myFont; //Declare font object
 		
 };
