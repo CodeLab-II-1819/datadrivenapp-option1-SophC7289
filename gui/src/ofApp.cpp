@@ -15,6 +15,6 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 	//myTitle.drawString("Tweet Tweet", 10, 10);
-	myIcon.draw(10, 10, 280, 250);
+	myIcon.draw(10, 20, 220, 150);
 
 }
