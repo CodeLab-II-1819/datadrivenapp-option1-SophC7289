@@ -11,4 +11,5 @@ class ofApp : public ofBaseApp{
 		void background(); //Declare background
 		ofTrueTypeFont myTitle; //Declare title object
 		ofImage myIcon; //Declare image object
+		ofTrueTypeFont myText; //Declare text object
 };
