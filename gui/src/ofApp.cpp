@@ -31,5 +31,6 @@ void ofApp::draw(){
 	ofDrawRectRounded(261, 148, 518, 531, 10); //Main box shape and position (outer)
 	ofSetColor(145, 196, 242); //Sets the main box colour (inner shape)
 	ofDrawRectRounded(265, 151, 509, 524, 10); //Main box shape and position (inner shape)
-
+	ofSetColor(45, 163, 213); //Text colour
+	//myText.drawString("We are scanning through a total of...", 320, 200); //Information
 }
