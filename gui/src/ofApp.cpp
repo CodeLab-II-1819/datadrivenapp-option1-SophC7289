@@ -14,8 +14,8 @@ void ofApp::draw(){
 	myIcon.draw(680, 40, 100, 90); //Positioning and size of image
 	ofSetColor(0, 185, 174); //Outer shape colour to give the menu box a outline
 	ofDrawRectRounded(17, 148, 231, 531, 10); //Outer shape rounded rect. to give the menu an outline
-	ofSetColor(145, 196, 242); //Sets the menu shape (inner shape)
-	ofDrawRectRounded(21, 151, 224, 524, 10); //Menu shape rounded edged rectangle (x, y, w, h, rounded)
+	ofSetColor(145, 196, 242); //Sets the menu shape colour (inner shape)
+	ofDrawRectRounded(21, 151, 224, 524, 10); //Menu shape size and position (inner shape) (x, y, w, h, rounded)
 	ofSetColor(229, 91, 42); //This colour represents what category the user has selected 
 	myText.drawString("How many...?", 30, 190); //"How many...?" category in menu
 	ofSetColor(45, 163, 213); //Text colour for everything else
@@ -27,7 +27,9 @@ void ofApp::draw(){
 	myText.drawString("Animal", 30, 550); //"Animal" category in menu
 	myText.drawString("Music", 30, 610); //"Music" category in menu
 	myText.drawString("Llama", 30, 670); //"Llama" category in menu
-
-
+	ofSetColor(0, 185, 174); //Outer shape colour to give the main box a outline
+	ofDrawRectRounded(261, 148, 518, 531, 10); //Main box shape and position (outer)
+	ofSetColor(145, 196, 242); //Sets the main box colour (inner shape)
+	ofDrawRectRounded(265, 151, 509, 524, 10); //Main box shape and position (inner shape)
 
 }
