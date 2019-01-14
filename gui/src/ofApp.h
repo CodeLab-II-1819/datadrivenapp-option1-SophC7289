@@ -9,6 +9,6 @@ class ofApp : public ofBaseApp{
 		void draw();
 
 		void background(); //Declare background
-		ofTrueTypeFont myTitle; //Declare title
-		ofImage myIcon; //Declare image
+		ofTrueTypeFont myTitle; //Declare title object
+		ofImage myIcon; //Declare image object
 };

@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-	int input = 0; //Declaring variable for user input when they pick what number in the menu
+	int input = 1; //Declaring variable for user input when they pick what number in the menu
 	int count = 0; //Declaring variable number of tweets in sample file
 	string Tweets; //Declaring tweet variable 
 
