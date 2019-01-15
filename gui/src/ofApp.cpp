@@ -32,5 +32,11 @@ void ofApp::draw(){
 	ofSetColor(145, 196, 242); //Sets the main box colour (inner shape)
 	ofDrawRectRounded(265, 151, 509, 524, 10); //Main box shape and position (inner shape)
 	ofSetColor(45, 163, 213); //Text colour
-	//myText.drawString("We are scanning through a total of...", 320, 200); //Information
+	myText.drawString("We are scanning through a total of...", 320, 220); //Information first line
+	ofSetColor(229, 91, 42); //Changes the colour of the amount of tweets lines. To make it stand out 
+	myText.drawString("63,693 Tweets", 435, 300); //Second line of information
+	ofSetColor(45, 163, 213); //Text colour
+	myText.drawString("in this file.", 465, 380); //Third line of information
+	myText.drawString("(Yes that is a lot of tweets to look through)", 292, 460); //Final line of information
+	myText.drawString("Go Back", 300, 650); //Go back to the main home screen
 }
