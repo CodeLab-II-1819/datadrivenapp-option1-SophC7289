@@ -8,7 +8,7 @@ int main(){
 	int input = 1; //Declaring variable for user input when they pick what number in the menu
 	int count = 0; //Declaring variable number of tweets in sample file
 	string Tweets; //Declaring tweet variable 
-	ifstream inFile;
+	ifstream inFile; //Declaring File variable 
 
 
 	while (input != 0) {
@@ -31,7 +31,6 @@ int main(){
 
 		//Each number in the menu is included in one big if statement 
 		if (input == 1) { //User presses 1 
-
 			//This opens the file in read mode
 			inFile.open("sampleTweets.csv"); //The sample tweet file
 
@@ -83,6 +82,101 @@ int main(){
 			}
 			else {
 				cout << "There is an error reading this tweet file" << endl; //If the file can't be read then this will come up
+			}
+		}
+		else if (input == 4) {
+			inFile.open("sampleTweets.csv");
+
+			if (inFile.good()) {
+
+				while (!inFile.eof()) {
+					getline(inFile, Tweets);
+
+					if (Tweets.find("Paris") <= Tweets.length()) {
+						cout << Tweets << endl;
+						count++;
+					}
+				}
+				cout << "There are " << count << " tweets mentioning the word Paris." << endl;
+			}
+			else {
+				cout << "There was an error reading this file." << endl;
+			}
+
+		}
+		else if (input == 5) {
+			inFile.open("sampleTweets.csv");
+
+			if (inFile.good()) {
+
+				while (!inFile.eof()){
+					getline(inFile, Tweets);
+
+						if (Tweets.find("Dreamworks") <= Tweets.length()) {
+							cout << Tweets << endl;
+								count++;
+						}
+				}
+				cout << "There are " << count << " tweets mention the word Dreamworks" << endl;
+			}
+			else {
+				cout << "There was an error reading this file." << endl;
+			}
+		}
+		else if (input == 6) {
+			inFile.open("sampleTweets.csv");
+
+			if (inFile.good()) {
+
+				while (!inFile.eof()) {
+					getline(inFile, Tweets);
+
+					if (Tweets.find("Uber") <= Tweets.length()) {
+						cout << Tweets << endl;
+						count++;
+					}
+				}
+				cout << "There are " << count << " tweets mentioning the word Uber." << endl;
+			}
+			else {
+				cout << "There was an error reading this file." << endl;
+			}
+		}
+		else if (input == 7) {
+			inFile.open("sampleTweets.csv");
+
+			if (inFile.good()) {
+
+				while (!inFile.eof()) {
+					getline(inFile, Tweets);
+
+					if (Tweets.find("Youtube") <= Tweets.length()) {
+						cout << Tweets << endl;
+						count++;
+					}
+				}
+				cout << "There are " << count << " tweets that mention YouTube." << endl;
+			}
+			else {
+				cout << "There was an error reading this file." << endl;
+			}
+		}
+		else if (input == 8) {
+			inFile.open("sampleTweets.csv");
+
+			if (inFile.good()) {
+				
+				while (!inFile.eof()) {
+					getline(inFile, Tweets);
+
+					if (Tweets.find("Animals") <= Tweets.length()) {
+						count++;
+					}
+				}
+				cout << "There are " << count << " tweets with the word Animals." << endl;
+			}
+			else {
+				cout << "There was an error reading this file." << endl;
 			}
 		}
 		cout << "To carry on press enter to finish press 0" << endl;
