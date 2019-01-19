@@ -179,6 +179,43 @@ int main(){
 				cout << "There was an error reading this file." << endl;
 			}
 		}
+		else if (input == 9) {
+		inFile.open("sampleTweets.csv");
+
+		if (inFile.good()) {
+
+			while (!inFile.eof()) {
+				getline(inFile, Tweets);
+
+				if (Tweets.find("Music") <= Tweets.length()) {
+					cout << Tweets << endl;
+					count++;
+				}
+			}
+			cout << "There are " << count << " tweets mentioning the word Music." << endl;
+		}
+		else {
+			cout << "There was an error reading this file." << endl;
+			}
+		}
+		else if (input == 10) {
+		inFile.open("sampleTweets.csv");
+
+		if (inFile.good()) {
+
+			while (!inFile.eof()) {
+				getline(inFile, Tweets);
+
+				if (Tweets.find("Llama") <= Tweets.length()) {
+					count++;
+				}
+			}
+			cout << "There are " << count << " tweets with the word Llama." << endl;
+		}
+		else {
+			cout << "There was an error reading this file." << endl;
+		}
+		}
 		cout << "To carry on press enter to finish press 0" << endl;
 		int cont; //Temporary variable so when it gets to "system("cls")" it won't close straight away
 		cin >> cont; //Waits for the user to press enter to carry on or press 0 to quit
