@@ -41,7 +41,7 @@ int main(){
 					count++; //Counts every tweet 1 by 1  
 				}
 				cout << "There are " << count << " lines of tweets being read." << endl; //Prints this line with the exact number of tweets in the file
-				 //Closes the file
+				
 			}
 			else {
 				cout << "There is an error reading the tweet file" << endl; //If the file hasn't been read then this message will come up 
@@ -93,23 +93,23 @@ int main(){
 					getline(inFile, Tweets); //Get line from the file
 
 					if (Tweets.find("Paris") <= Tweets.length()) { //Finds any tweets with the word Paris in them
-						cout << Tweets << endl; // Prints
-						count++;
+						cout << Tweets << endl; // Prints each tweet that mentions the word Paris
+						count++; //Counts each tweet ne by one 
 					}
 				}
-				cout << "There are " << count << " tweets mentioning the word Paris." << endl;
+				cout << "There are " << count << " tweets mentioning the word Paris." << endl; //Prints how many tweets mention the word Paris
 			}
 			else {
-				cout << "There was an error reading this file." << endl;
+				cout << "There was an error reading this file." << endl; //If the file doesn't open this message comes up
 			}
 
 		}
 		else if (input == 5) {
-			inFile.open("sampleTweets.csv");
+			inFile.open("sampleTweets.csv"); //Sample tweets file
 
-			if (inFile.good()) {
+			if (inFile.good()) { //Checks if the file will open
 
-				while (!inFile.eof()){
+				while (!inFile.eof()){ //Will keep running until the end of the file 
 					getline(inFile, Tweets);
 
 						if (Tweets.find("Dreamworks") <= Tweets.length()) {
@@ -213,14 +213,14 @@ int main(){
 			cout << "There are " << count << " tweets with the word Llama." << endl;
 		}
 		else {
-			cout << "There was an error reading this file." << endl;
+			cout << "There was an error reading this file." << endl; //Comes up if the file doesn't open
 		}
 		}
-		inFile.close();
+		inFile.close(); //Closes the file
 		cout << "To carry on press 11 then enter. To finish press 0" << endl; //Gives the user the option to crry on or exit the program 
 		int cont = 11; //Temporary variable so when it gets to "system("cls")" it won't close straight away
 		cin >> cont; //Waits for the user to press enter to carry on or press 0 to quit
-		if (cont == 11) { //If statment if the user enters 11
+		if (cont == 11) { //If statment if the user enters 11 then the menu gets printed again
 			break;
 		}
 		system("cls"); //Clears the console window
