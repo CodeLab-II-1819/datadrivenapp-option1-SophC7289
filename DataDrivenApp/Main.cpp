@@ -67,49 +67,49 @@ int main(){
 			}
 		}
 		else if (input == 3) {
-			inFile.open("sampleTweets.csv"); //The sample tweet file
+			inFile.open("sampleTweets.csv");
 
-			if (inFile.good()) { //checks if the file is open
+			if (inFile.good()) { 
 
-				while (!inFile.eof()) { //Will keep running until it reaches the end of the file 
-					getline(inFile, Tweets); //Get line from the file
+				while (!inFile.eof()) {  
+					getline(inFile, Tweets); 
 
-					if (Tweets.find("politics") <= Tweets.length()) { //Using this 
-						count++; //Go through the tweets one by one
+					if (Tweets.find("politics") <= Tweets.length()) {
+						count++; 
 					}
 				}
-				cout << "There are " << count << " tweets mentioning the word Politics." << endl; //Output statement with amount of tweets with the word "money"
+				cout << "There are " << count << " tweets mentioning the word Politics." << endl; 
 			}
 			else {
-				cout << "There is an error reading this tweet file" << endl; //If the file can't be read then this will come up
+				cout << "There is an error reading this tweet file" << endl;
 			}
 		}
 		else if (input == 4) {
-			inFile.open("sampleTweets.csv"); //The sample tweets folder
+			inFile.open("sampleTweets.csv"); 
 
-			if (inFile.good()) { //Checks if the file is open
+			if (inFile.good()) {
 
-				while (!inFile.eof()) { //Will keep running until it reaches the end of the file
-					getline(inFile, Tweets); //Get line from the file
+				while (!inFile.eof()) {
+					getline(inFile, Tweets);
 
-					if (Tweets.find("Paris") <= Tweets.length()) { //Finds any tweets with the word Paris in them
-						cout << Tweets << endl; // Prints each tweet that mentions the word Paris
-						count++; //Counts each tweet ne by one 
+					if (Tweets.find("Paris") <= Tweets.length()) { //Finds all the tweets with the word Paris 
+						cout << Tweets << endl; //Prints each tweet in order with the word Paris
+						count++; //Goes through the file tweet by tweet
 					}
 				}
-				cout << "There are " << count << " tweets mentioning the word Paris." << endl; //Prints how many tweets mention the word Paris
+				cout << "There are " << count << " tweets mentioning the word Paris." << endl; 
 			}
 			else {
-				cout << "There was an error reading this file." << endl; //If the file doesn't open this message comes up
+				cout << "There was an error reading this file." << endl; 
 			}
 
 		}
 		else if (input == 5) {
-			inFile.open("sampleTweets.csv"); //Sample tweets file
+			inFile.open("sampleTweets.csv"); 
 
-			if (inFile.good()) { //Checks if the file will open
+			if (inFile.good()) { 
 
-				while (!inFile.eof()){ //Will keep running until the end of the file 
+				while (!inFile.eof()){
 					getline(inFile, Tweets);
 
 						if (Tweets.find("Dreamworks") <= Tweets.length()) {
