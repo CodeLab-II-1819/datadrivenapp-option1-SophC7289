@@ -15,7 +15,7 @@ int main(){
 		count = 0;
 
 		//Prints to the console window what happens and tells the user to press a number to find out specific tweets
-		cout << "This program will look through 1000's of tweets from the top 20 twitter users. Pick a number from the list below to find specific tweets.." << endl;
+		cout << "This program will look through 1000's of tweets from the top 20 twitter users." << "\n" << "Type a number from the list below and press enter to find specific tweets.." << endl;
 		cout << "1 - exact number of tweets collated" << endl; //This will search every tweet and give them the exact number of tweets in the file
 		cout << "2 - mentioning Money" << endl; //Search amount of tweets that mentions money
 		cout << "3 - mentioning Politics" << endl; //Search amount of tweets that mentions politics
@@ -217,14 +217,12 @@ int main(){
 		}
 		}
 		inFile.close(); //Closes the file
-		cout << "To carry on press 11 then enter. To finish press 0" << endl; //Gives the user the option to crry on or exit the program 
-		int cont = 11; //Temporary variable so when it gets to "system("cls")" it won't close straight away
-		cin >> cont; //Waits for the user to press enter to carry on or press 0 to quit
-		if (cont == 11) { //If statment if the user enters 11 then the menu gets printed again
-			break;
+		cout << "To carry on press 1 then enter. To finish press 0" << endl; //Gives the user the option to carry on or exit the program 
+		cin >> input; //Waits for the user to press enter to carry on or press 0 to quit
+		if (input == 1) { //If statment if the user enters 1 then the menu gets printed again
+			system("cls"); //Clears the console window
 		}
-		system("cls"); //Clears the console window
-
+		
 	} 
 	cout << "Thanks for using this. Goodbye" << endl; //The final message when the user presses 0
 	
